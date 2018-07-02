@@ -1,0 +1,8 @@
+*.pyc
+*.swp
+*.npy
+__pycache__
+output
+job_parameters.json
+job_result.json
+.exrc

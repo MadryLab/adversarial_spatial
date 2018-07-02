@@ -1,0 +1,49 @@
+{
+  "model": {
+      "output_dir": "output/test",
+      "pad_mode": "constant",
+      "filters": [16, 16, 32, 64],
+      "pad_size": 32
+  },
+
+  "training": {
+      "tf_random_seed": 557212,
+      "np_random_seed": 993101,
+      "max_num_training_steps": 80000,
+      "num_output_steps": 100,
+      "num_summary_steps": 100,
+      "num_eval_steps": 500,
+      "num_checkpoint_steps": 500,
+      "batch_size": 128,
+      "step_size_schedule": [[0, 0.1], [40000, 0.01], [60000, 0.001]],
+      "momentum": 0.9,
+      "weight_decay": 0.0002,
+      "eval_during_training": true,
+      "adversarial_training": false,
+      "data_augmentation": true
+  },
+
+  "eval": {
+      "num_eval_examples": 10000,
+      "batch_size": 128,
+      "adversarial_eval": true
+  },
+
+  "attack": {
+      "use_linf": false,
+      "use_spatial": true,
+
+      "loss_function": "xent",
+      "epsilon": 8.0,
+      "num_steps": 5,
+      "step_size": 2.0,
+      "random_start": false,
+
+      "spatial_method": "random",
+      "spatial_limits": [3, 3, 30],
+      "random_tries": 10,
+      "grid_granularity": [5, 5, 31]
+  },
+
+  "data": { "data_path": "/scratch/datasets/cifar10" }
+}
