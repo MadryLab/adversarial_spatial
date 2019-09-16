@@ -1,13 +1,13 @@
 # Adversarial rotations and translations for CIFAR10
 
 This repository contains code to train and evaluate CIFAR10 models against
-adversarially chosen rotations and translations. It can be used to reproduce the
+adversarially chosen rotations and translations (code for ImageNet at https://github.com/MadryLab/spatial-pytorch). It can be used to reproduce the
 main experiments of:
 
-**A Rotation and a Translation Suffice:
-   Fooling CNNs with Simple Transformations**<br>
+**Exploring the Landscape of Spatial Robustness**<br>
 *Logan Engstrom\*, Brandon Tran\*, Dimitris Tsipras\*, Ludwig Schmidt, Aleksander
    Mądry*<br>
+ICML 2019<br>
 http://arxiv.org/abs/1712.02779
 
 The main scipts to run are `train.py` and `eval.py`, which will train and
